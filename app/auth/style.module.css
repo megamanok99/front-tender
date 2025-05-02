@@ -1,0 +1,8 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(90deg,rgba(4, 75, 226, 1) 0%, rgba(4, 75, 226, 1) 5%, rgba(1, 30, 84, 1) 100%) ;
+}
