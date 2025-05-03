@@ -3,6 +3,7 @@
 import { Avatar, Button, Layout, Space, Typography } from 'antd';
 import { useRouter } from 'next/navigation';
 import styles from './style.module.css';
+import { LoginOutlined } from '@ant-design/icons';
 const { Header: AntHeader } = Layout;
 const { Text } = Typography;
 
@@ -32,7 +33,7 @@ export const Header = ({
           </Button>
         </Space>
       ) : (
-        <Button onClick={() => router.push('/auth')}>Войти</Button>
+        <Button type='primary' shape="circle" icon={<LoginOutlined />} onClick={() => router.push('/auth')}/>
       )}
     </AntHeader>
   );

@@ -29,7 +29,7 @@ export const AuthForm = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button type='primary' htmlType='submit' loading={isLoading} block>
+          <Button type='ghost' htmlType='submit' loading={isLoading} >
             Войти
           </Button>
         </Form.Item>

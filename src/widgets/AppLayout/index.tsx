@@ -50,15 +50,17 @@ export const AppLayout = ({ children }: { children: React.ReactNode }) => {
     <Layout style={{ minHeight: '100vh' }}>
       <Header userData={userData} setUserData={setUserData} />
       <Layout>
-        <Sider width={200} style={{ background: '#fff' }}>
-          <Menu
-            mode='inline'
-            selectedKeys={pathname ? [pathname] : []}
-            style={{ height: '100%', borderRight: 0 }}
-            items={menuItems}
-            onClick={({ key }) => router.push(key)}
-          />
-        </Sider>
+        {true && (
+          <Sider width={200} style={{ background: '#fff' }}>
+            <Menu
+              mode='inline'
+              selectedKeys={[pathname || '']}
+              style={{ height: '100%', borderRight: 0 }}
+              items={menuItems}
+              onClick={({ key }) => router.push(key)}
+            />
+          </Sider>
+        )}
         <Layout style={{ padding: '24px' }}>
           <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 }}>
             {children}
